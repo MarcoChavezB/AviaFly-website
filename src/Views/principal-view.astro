@@ -1,0 +1,29 @@
+---
+import NavBar from '../components/sections/navbar.astro'
+import Header from '../components/sections/header.astro'
+import AboutUsCard from '../components/cards/about-us-card.astro'
+---
+<div class="relative h-full w-full">
+  <div class="absolute top-0 left-0 w-full z-10">
+    <NavBar />
+  </div>
+  <Header />
+
+    <div class="title flex items-center justify-center">
+      <h3 class="p-2 px-36 font-bold text-xl">NOSOTROS</h3>
+    </div>
+
+  <AboutUsCard/>
+</div>
+
+
+
+<style>
+  .title{
+    height: 30vh;
+  }
+  .title h3{
+    background-color: #090C2B;
+    color: white
+  }
+</style>
