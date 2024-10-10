@@ -1,0 +1,63 @@
+<section class="center mt-10">
+  <div class="intra grid grid-cols-2 gap-5">
+    <div class="general">
+      <h4 class="font-semibold text-2xl">REQUISITOS</h4>
+      <ul style="color: #7D7D7D;" class="mt-5">
+        <li>Acta de Nacimiento</li>
+        <li>INE</li>
+        <li>Certificado de Prepa o Título</li>
+        <li>CURP</li>
+        <li>Examen Médico (Expedido por SCT)</li>
+      </ul>
+
+      <h4 class="mt-10 font-semibold text-2xl">PLAN DE ESTUDIOS</h4>
+      <ul style="color: #7D7D7D;" class="mt-5">
+        <li>6 meses teóricos</li>
+        <li>44 hrs de prácticas de vuelo</li>
+        <li>10 hrs simulador</li>
+        <li>Certificado</li>
+        <li>Diploma</li>
+        <li>Licencia Federal (Expedida por AFAC)</li>
+      </ul>
+    </div>
+    <div class="performance">
+      <div class="img h-full w-full">
+        <img src="/img/PilotoPrivado/PilotoPrivado1.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: fit-content;
+  }
+
+  .intra {
+    width: 55%;
+    height: 90%;
+  }
+
+  .general ul, .performance ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+
+  @media only screen and (max-width: 599px) {
+    .intra{
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr ;
+    }
+  }
+</style>

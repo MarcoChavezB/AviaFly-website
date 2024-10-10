@@ -1,0 +1,53 @@
+<section class="center mt-10">
+  <div class="intra grid grid-cols-2 gap-5">
+    <div class="general">
+      <h4 class="font-semibold text-2xl">REQUISITOS</h4>
+      <ul style="color: #7D7D7D;" class="mt-5"> <!-- Color gris -->
+        <li>Certificado de preparatoria (Original y copia)</li>
+        <li>Acta de Nacimiento (Original y copia)</li>
+        <li>Examen médico expedido por Dirección General de Protección y Medicina Preventiva en el Transporte (Monterrey, Querétaro, Guadalajara, Cd. De México, entre otros)</li>
+        <li>Identificación oficial (Copia)</li>
+        <li>Comprobante de domicilio (Copia)</li>
+        <li>CURP (Copia)</li>
+      </ul>
+    </div>
+    <div class="performance">
+      <div class="img h-full w-full">
+        <img src="/img/Tecnico/TecnicoInstructor.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: fit-content;
+  }
+
+  .intra {
+    width: 55%;
+    height: 90%;
+  }
+
+  .general ul, .performance ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .intra{
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr;
+    } 
+  }
+</style>

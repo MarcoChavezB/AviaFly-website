@@ -1,0 +1,95 @@
+---
+import SimpleButton from '../buttons/simple-button.astro'
+---
+<section class="flex items-center justify-center">
+  <div class="intra-cont grid grid-cols-2">
+    <div class="image flex items-center justify-end mr-2">
+      <img src="/img/Cessna/Cessna.jpg" alt="">
+    </div>
+    <div class="information text-[#090C2B]">
+      <div class="title font-extrabold text-2xl">
+        CESSNA 172
+      </div>
+      <div class="footer font-bold mb-4 mt-4">
+        Características generales
+      </div>
+      <div class="caracteristics">
+        <ul>
+          <li>Tripulación: 1 Piloto</li>
+          <li>Capacidad: 3 Pasajeros</li>
+          <li>Longitud: 7,9 m (26 ft)</li>
+          <li>Envergadura: 10.97 m (36 ft)</li>
+          <li>Altura: 2,9 m (9 1/2 ft)</li>
+          <li>Superficie alar: 16,2 m² (174,4 ft²)</li>
+          <li>Perfil alar: NACA 2312 modificado</li>
+          <li>Peso vacío: 630 Kg (1387 lb)</li>
+          <li>Peso útil: 415 Kg (913 lb)</li>
+          <li>Peso máximo al despegue: 1,045 Kg (2,300 lb)</li>
+          <li>Planta motriz: 1 motor marca Avco Lycoming 4 cil Enfriado por Aire horizontales opuestos, Flecha Directa</li>
+          <li>Caballos de Fuerza: 150 HP 2,700 RPM</li>
+        </ul>
+        <a href="/cessna-172">
+          <SimpleButton content="Ver más" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 57vh;
+  }
+
+  .intra-cont {
+    height: 90%;
+    width: 60%;
+  }
+
+  img {
+    border-radius: 10px;
+    width: 25vw;
+    height: 32vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  ul {
+    list-style-type: disc; 
+    padding-left: 3rem; 
+  }
+
+  li{
+    font-size: 0.8rem;
+  }
+
+  .footer{
+    font-size: 0.8rem;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .intra-cont{
+      width: 100%;
+      grid-template-rows: 1fr 3fr;
+      grid-template-columns: 1fr;
+    }
+    img{
+      width: 90%;
+      height: 100%;
+    }
+    .image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section {
+      height: 90vh;
+    }
+
+    .information{
+      margin-left: 20px;
+    }
+  }
+</style>

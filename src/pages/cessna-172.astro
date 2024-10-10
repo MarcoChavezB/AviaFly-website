@@ -1,0 +1,36 @@
+---
+import Header from '../components/sections/header.astro'
+import Layout from '../layouts/layout.astro'
+import CessnaCaracteristics from '../components/sections/Cessna/cessna-caracteristics.astro'
+import CessnaGallery from '../components/sections/Cessna/cessna-gallery.astro'
+
+---
+
+<Layout 
+title="Cessna-172">
+  <div class="relative h-full w-full">
+    <Header 
+      subtitle="AVIATRAINING AND TECHNOLOGY S.C F-150"
+      title="Cessna-172"
+      buttonText="VER MÁS"
+      img={[
+        '/img/Cessna/Cessna1.jpg',
+        '/img/Cessna/Cessna2.jpg',
+        '/img/Cessna/Cessna3.jpg'
+      ]}
+      />
+  </div>
+
+  <CessnaCaracteristics/>  
+  <CessnaGallery/>  
+</Layout>
+
+<style>
+  .title{
+    height: 30vh;
+  }
+  .title h3{
+    background-color: #090C2B;
+    color: white
+  }
+</style>

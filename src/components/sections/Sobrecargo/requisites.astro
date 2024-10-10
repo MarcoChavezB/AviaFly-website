@@ -1,0 +1,67 @@
+
+<section class="center mt-10">
+  <div class="intra grid grid-cols-2 gap-5">
+    <div class="general">
+      <h4 class="font-semibold text-2xl">REQUISITOS</h4>
+      <ul style="color: #7D7D7D;" class="mt-5"> <!-- Color gris -->
+        <li>Acta de Nacimiento</li>
+        <li>INE</li>
+        <li>Certificado de Prepa o Título</li>
+        <li>CURP</li>
+        <li>Examen Médico (Expedido por SCT)</li>
+        <li>*No se requiere ninguna característica física.</li>
+      </ul>
+
+      <h4 class="mt-10 font-semibold text-2xl">PLAN DE ESTUDIOS (5 MESES)</h4>
+      <ul style="color: #7D7D7D;" class="mt-5"> <!-- Color gris -->
+        <li>Servicios a Bordo</li>
+        <li>Meteorología</li>
+        <li>Mercancías Peligrosas</li>
+        <li>Reglamentación Aérea</li>
+        <li>Procedimientos de Emergencia</li>
+        <li>Aerodinámica</li>
+        <li>Factores Humanos y CRM</li>
+        <li>Geografía Turística</li>
+        <li>Prácticas de Emergencias Reales</li>
+      </ul>
+    </div>
+    <div class="performance">
+      <div class="img h-full w-full">
+        <img src="/img/Sobrecargo/SobrecargoStudent.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: fit-content;
+  }
+
+  .intra {
+    width: 55%;
+    height: 90%;
+  }
+
+  .general ul, .performance ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .intra{
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+</style>

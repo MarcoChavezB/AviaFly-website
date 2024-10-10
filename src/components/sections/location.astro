@@ -1,0 +1,99 @@
+<section class="center">
+  <div class="intra-content">
+    <div class="location-details flex items-start flex-col text-white">
+      <h3 class="text-2xl font-bold mb-4">UBICACIONES</h3>
+
+      <div class="location1 mb-6">
+        <h4 class="text-xl font-semibold border-b border-white pb-1">QUERÉTARO</h4>
+        <p class="mt-2 font-semibold">DIRECCIÓN</p>
+        <p>(Plaza Palmas I, planta alta)</p>
+        <p>Blvd. Universitario #395, local 12. Fraccionamiento Jurica La Solana II. Santa Rosa Jauregui, Querétaro. 76230 Querétaro, México.</p>
+        <p class="mt-2 font-semibold">Email</p>
+        <p>infoqro@aviafly.mx</p>
+        <p class="mt-2 font-semibold">NÚMERO DE TELÉFONO</p>
+        <p>442 592 6044</p>
+      </div>
+
+      <div class="location2">
+        <h4 class="text-xl font-semibold border-b border-white pb-1">TORREÓN</h4>
+        <p class="mt-2 font-semibold">DIRECCIÓN</p>
+        <p>(Segundo piso local 17)</p>
+        <p>Blvd. Independencia #746 ote. Col. Nueva Los Angeles. Torreón, Coah.</p>
+        <p class="mt-2 font-semibold">Email</p>
+        <p>infotrc@aviafly.mx</p>
+        <p class="mt-2 font-semibold">NÚMERO DE TELÉFONO</p>
+        <p>871 116 6464</p>
+      </div>
+    </div>
+    <div class="maps grid grid-rows-2">
+      <div class="location center">
+        <a href="">
+          <img 
+          class="cursor-pointer"
+          src="/img/Location/Queretaro.png" alt="">
+        </a>
+      </div>
+      <div class="location center">
+        <a href="">
+          <img 
+          class="cursor-pointer"
+          src="/img/Location/Torreon.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div> 
+</section>
+<style>
+  section {
+    background-color: #090C2B;
+    height: 90vh;
+    padding: 20px; 
+  }
+  
+  .intra-content {
+    height: 90%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  
+  img{
+    width: 25vw;
+    height: 25vh;
+  }
+  h3, h4 {
+    color: white; 
+  }
+  
+  p {
+    color: #d1d1d1;
+    margin-bottom: 0.5rem; 
+  }
+  
+  .border-b {
+    border-bottom: 2px solid white; 
+  }
+
+  @media only screen and (max-width: 599px) {
+    .intra-content{
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+    }
+    
+    section{
+      height: 120vh;
+    }
+
+    .maps{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 10px;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>

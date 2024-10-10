@@ -1,0 +1,81 @@
+<section class="center">
+  <div class="intra grid grid-cols-2 gap-5">
+    <div class="general">
+      <h4 class="font-semibold text-xl">PLAN DE ESTUDIOS</h4>
+      <ul style="color: #090C2B;" class="mt-5">
+        <li>10 meses de teoría</li>
+        <li>Uniforme</li>
+        <li>240 hrs de práctica</li>
+        <li>12 materias</li>
+        <li>Permiso de formación</li>
+        <li>Diploma</li>
+        <li>Licencia Federal Expedida por la Agencia Federal de Aviación Civil</li>
+      </ul>
+    </div>
+    <div class="performance">
+      <h4 class="font-semibold text-xl">INVERSIÓN</h4>
+      <ul style="color: #090C2B;" class="mt-5">
+        <li>Inscripción <span class="line"></span> <span class="price">$4,640</span></li>
+        <li>10 Mensualidades <span class="line"></span> <span class="price">$3,596</span></li>
+        <li>Uniforme <span class="line"></span> <span class="price">$600</span></li>
+        <li>Permiso de formación <span class="line"></span> <span class="price">$2,400</span></li>
+        <li>Orden de examen teórico <span class="line"></span> <span class="price">$5,500</span></li>
+        <li>Orden de examen práctico <span class="line"></span> <span class="price">$6,000</span></li>
+        <li>Expedición de licencia <span class="line"></span> <span class="price">$6,800</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 40vh;
+  }
+
+  .intra {
+    width: 55%;
+    height: 90%;
+  }
+
+  .general ul, .performance ul {
+    padding-left: 0;
+  }
+
+  .performance li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .performance li .price {
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .performance li .line {
+    flex-grow: 1;
+    height: 1px;
+    border-bottom: 1px dashed #CCCCCC;
+    margin: 0 10px;
+  }
+
+  li {
+    font-size: 1rem;
+    position: relative;
+    font-style: bold;
+  }
+
+  .general ul{
+    list-style-type: disc;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .intra{
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: fit-content;
+    }
+  }
+</style>

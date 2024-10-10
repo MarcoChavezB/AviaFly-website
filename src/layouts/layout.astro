@@ -1,0 +1,25 @@
+---
+import '../global.css'
+import FooterSection from '../components/sections/footer-section.astro'
+import Navbar from '../components/sections/navbar.astro'
+import { ViewTransitions } from 'astro:transitions'
+const {title} = Astro.props
+---
+
+<html lang="en" transition:animate="slide">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/Logo_avia_blanco.png" />
+		<meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Avia - Avia Aviation Academy - Torreón</title>
+    <ViewTransitions/>
+	</head>
+  <body>
+    <div class="absolute top-0 left-0 w-full z-10">
+      <Navbar />
+    </div>
+    <slot/>
+    <FooterSection/>
+  </body>
+</html>

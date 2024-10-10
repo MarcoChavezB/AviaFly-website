@@ -1,0 +1,62 @@
+<section class="flex justify-center items-center">
+  <div class="intra-cont">
+    <div class="courses flex flex-wrap gap-2">
+      <div class="img">
+        <img src="/img/Tecnico/TecnicoInstructor.jpg" alt="">
+      </div>
+
+      <div class="img">
+        <img src="/img/Tecnico/TecnicoInstructor2.jpg" alt="">
+      </div>
+
+      <div class="img">
+        <img src="/img/Tecnico/TecnicoInstructor3.jpg" alt="">
+      </div>
+      <div class="img">
+        <img src="/img/Tecnico/TecnicoInstructor4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section{
+    height: 80vh;
+  }
+
+  .intra-cont{
+    height: 80%;
+    width: 50%;
+  }
+
+  .img{
+    height: 22.7vh;
+    width: 16vw;
+  }
+
+  img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ajustar imagen al contenedor sin deformarla */
+  }
+
+  .title h3{
+    background-color: white;
+    color: #090C2B;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .img{
+      width: 100%;
+    }
+    .intra-cont{
+      width: 90%;
+    }
+    
+    section{
+      height: 120vh;
+    }
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import Header from "../components/sections/header.astro"
+import Layout from "../layouts/layout.astro"
+import Requisites from "../components/sections/Tecnic/requisites.astro"
+import Information from "../components/sections/Tecnic/information.astro"
+import Gallery from '../components/sections/Tecnic/gallery.astro'
+---
+
+<Layout title="tecnico en mantenimiento">
+  <div class="relative h-full w-full">
+    <Header 
+      subtitle="AVIATRAINING AND TECHNOLOGY S.C F-150"
+      title="TÉCNICO EN MANTENIMIENTO AERONÁUTICO"
+      buttonText="VER MÁS"
+      img={[
+        '/img/Tecnico/Tecnico.jpg',
+      ]}
+      />
+  </div>
+
+  <Requisites/>
+  <Information/>
+  <Gallery/>
+</Layout>

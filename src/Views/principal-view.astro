@@ -1,22 +1,50 @@
 ---
-import NavBar from '../components/sections/navbar.astro'
 import Header from '../components/sections/header.astro'
-import AboutUsCard from '../components/cards/about-us-card.astro'
+import AboutUsRightCard from '../components/cards/about-us-right-card.astro'
+import AboutUsLeftCard from '../components/cards/about-us-left-card.astro'
+import Coursers from '../components/sections/courses.astro'
+import CessnaDetails from '../components/sections/cessna-details.astro'
+import Location from '../components/sections/location.astro'
+import ContactUs from '../components/sections/contact-us.astro'
 ---
+
 <div class="relative h-full w-full">
-  <div class="absolute top-0 left-0 w-full z-10">
-    <NavBar />
+  <Header 
+    subtitle="AVIATRAINING AND TECHNOLOGY S.C F-150"
+    title="FORMA PARTE DE NUESTRA ACADEMIA DE"
+    title2="AVIACIÓN"
+    buttonText="VER MÁS"
+    img={[
+      '/img/SkyPlane.jpg',
+      '/img/Cessna/Cessna1.jpg',
+      '/img/Cessna/Cessna2.jpg',
+      '/img/Cessna/Cessna3.jpg'
+    ]}
+    />
+  <div id="about-us" #about-us class="title flex items-center justify-center">
+    <h3 class="p-2 px-36 font-bold text-xl">NOSOTROS</h3>
   </div>
-  <Header />
 
-    <div class="title flex items-center justify-center">
-      <h3 class="p-2 px-36 font-bold text-xl">NOSOTROS</h3>
-    </div>
+  <AboutUsRightCard 
+    img="/img/Mision.jpg"
+    title="MISIÓN"
+    content="Formar personal técnico aeronáutico íntegros, con una visión en pro de la seguridad aérea y competitivos en cualquier tipo de área en el cual se desenvuelven dentro de las actividades que su licencia le permite ejercer y que al mismo tiempo estén comprometidos con el desarrollo de la industria aeronáutica."/>
 
-  <AboutUsCard/>
+  <AboutUsLeftCard
+    img="/img/Vision.png"
+    title="VISIÓN"
+    content="Posicionarse como una escuela de aviación de vanguardia tecnológica logrando que los egresados sean competitivos y siempre logrando operaciones aéreas seguras."/>
+
+  <AboutUsRightCard 
+    img="/img/Filosofia.jpg"
+    title="FILOSOFÍA"
+    content="Proporcionar una capacitación y adiestramiento con calidad, en base a la conformación de procedimientos adecuados dentro del desarrollo de las actividades realizadas por el personal en las distintas áreas de trabajo y su relación y coordinación mutua, para brindar prácticas seguras que sean reflejadas como un elemento de confiabilidad en bases reales y sólidas ante una respuesta de actuario eficaz y positiva que interactúe en la industria aeronáutica."/>
+  <Coursers/>
+  <CessnaDetails/>
+  <Location/>
+  <ContactUs/>
+
 </div>
-
-
 
 <style>
   .title{

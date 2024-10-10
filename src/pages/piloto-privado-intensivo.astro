@@ -1,0 +1,23 @@
+---
+import Header from "../components/sections/header.astro"
+import Layout from "../layouts/layout.astro"
+import Invert from "../components/sections/PilotoIntensivo/invert.astro"
+import Information from "../components/sections/PilotoIntensivo/information.astro"
+import Gallery from '../components/sections/PilotoIntensivo/gallery.astro'
+---
+
+<Layout title="PILOT-PRIVADO-INTENSIVO">
+  <div class="relative h-full w-full">
+    <Header 
+      subtitle="AVIATRAINING AND TECHNOLOGY S.C F-150"
+      title="PILOTO PRIVADO (INTENSIVO)"
+      buttonText="VER MÁS"
+      img={[
+      '/img/PilotoPrivadoIntensivo/Piloto2.jpg',
+      ]}
+      />
+  </div>
+  <Information/>
+  <Invert/>
+  <Gallery/>
+</Layout>

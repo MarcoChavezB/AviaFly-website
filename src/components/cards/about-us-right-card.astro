@@ -1,0 +1,74 @@
+---
+// Variables de propiedad
+const { img, title, content, altText } = Astro.props
+---
+
+<section class="flex items-center justify-start">
+  <div class="content-card">
+    <article class="flex items-center justify-end">
+      <img src={img} alt={altText || 'Image for ' + title}>   
+      <article class="flex items-center justify-center content">
+        <div class="cont absolute">
+          <h2 class="title p-5 px-7 text-xl font-bold">{title}</h2>
+          <div class="cont-line flex justify-end">
+            <div class="lin bg-white"></div>
+          </div>
+          <p class="body-text p-5 px-7 py-7 text-xs leading-5">{content}</p>
+        </div>
+      </article>
+    </article>
+  </div>
+</section>
+
+<style>
+  article {
+    height: 55vh;
+  }
+
+  .cont {
+    background-color: #090C2B;
+    color: white;
+    width: 16rem;
+  }
+
+  img {
+    height: 45vh;   
+    object-fit: cover; 
+  }
+
+  .lin {
+    height: 1px;
+    width: 70%;
+  }
+
+  .content-card {
+    width: 61vw;
+  }
+
+  @media only screen and (max-width: 599px) {
+    article {
+      flex-direction: column; 
+      width: 100%;
+    }
+
+    section {
+      justify-content: center;
+    }   
+
+    .content-card{
+      width: 90%;
+    }
+
+    .lin{
+      width: 100%;
+    }
+
+    img {
+      height: auto; 
+    }
+
+    .cont {
+      width: auto; 
+    }
+  }
+</style>

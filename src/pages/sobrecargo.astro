@@ -1,0 +1,24 @@
+---
+import Header from "../components/sections/header.astro"
+import Layout from "../layouts/layout.astro"
+import Requisites from "../components/sections/Sobrecargo/requisites.astro"
+import Information from "../components/sections/Sobrecargo/information.astro"
+import Gallery from '../components/sections/Sobrecargo/gallery.astro'
+---
+
+<Layout title="SOBRECARGO">
+  <div class="relative h-full w-full">
+    <Header 
+      subtitle="AVIATRAINING AND TECHNOLOGY S.C F-150"
+      title="SOBRECARGO"
+      buttonText="VER MÁS"
+      img={[
+      '/img/Sobrecargo/Sobrecargo3.jpg',
+      ]}
+      />
+  </div>
+
+  <Requisites/>
+  <Information/>
+  <Gallery/>
+</Layout>

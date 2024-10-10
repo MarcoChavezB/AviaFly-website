@@ -1,0 +1,88 @@
+<section class="center">
+  <div class="intra grid grid-cols-2 gap-5">
+    <div class="general">
+      <h4 class="text-[#090C2B] font-extrabold text-2xl">REQUISITOS</h4>
+      <ul style="color: #090C2B;" class="mt-5">
+        <li>Acta de Nacimiento</li>
+        <li>INE</li>
+        <li>Certificado de Prepa o Título</li>
+        <li>CURP</li>
+        <li>Examen Médico (Expedido por SCT)</li>
+        <li>Comprobante de domicilio</li>
+      </ul>
+    </div>
+    <div class="general">
+      <h4 class="text-[#090C2B] font-extrabold text-2xl">PLAN DE ESTUDIOS</h4>
+      <ul class="mt-5">
+        <li>3 meses teóricos</li>
+        <li>44 hrs de prácticas de vuelo</li>
+        <li>10 hrs simulador</li>
+        <li>Certificado</li>
+        <li>Diploma</li>
+      </ul>
+      <p class="underline">Acomoda tus materias y horarios a tu comodidad</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 40vh;
+  }
+
+  .intra {
+    width: 55%;
+    height: 90%;
+  }
+
+  .general ul, .performance ul {
+    padding-left: 0;
+  }
+
+  .performance li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .performance li .price {
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .performance li .line {
+    flex-grow: 1;
+    height: 1px;
+    border-bottom: 1px dashed #CCCCCC;
+    margin: 0 10px;
+  }
+
+  li {
+    font-size: 1rem;
+    position: relative;
+    font-style: bold;
+    color: #7F7F7F;
+    margin-bottom: 10px;
+  }
+
+  .general ul{
+    list-style-type: disc;
+  }
+
+
+  @media only screen and (max-width: 599px) {
+
+    section{
+      height: fit-content;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .intra{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 85%;
+    }
+  }
+</style>

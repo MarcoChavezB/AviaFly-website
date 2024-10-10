@@ -1,0 +1,87 @@
+---
+const {img, title, content} = Astro.props
+---
+<section class="flex items-center justify-start">
+  <div class="content-card">
+    <article class="flex items-center justify-end">
+      <img src={img} alt="" class="order-1">   
+      <article class="flex items-center justify-center content order-2">
+        <div class="cont absolute">
+          <div class="mt-10 title text-end p-5 px-7 text-xl font-bold">
+            {title}
+          </div>
+          <div class="cont-line flex justify-start">
+            <div class="lin bg-white"></div>
+          </div>
+          <div class="body-text text-end p-5 px-7 py-7 text-xs leading-5">
+            {content}
+          </div>
+        </div>
+      </article>
+    </article>
+  </div>
+</section>
+
+
+<style>
+  article{
+    height: 55vh;
+  }
+
+  .cont{
+    background-color: #090C2B;
+    color: white;
+    width: 16rem;
+    height: 40vh;
+  }
+
+  img{
+    height: 50vh;
+  }
+
+  .lin{
+    height: 1px;
+    width: 80%;
+  }
+
+  .content-card{
+    width: 70vw;
+  }
+
+  
+  @media only screen and (max-width: 599px) {
+    article {
+      flex-direction: column; 
+      width: 100%;
+    }
+
+    section {
+      justify-content: center;
+    }   
+
+    .content-card{
+      width: 90%;
+    }
+
+    .lin{
+      width: 100%;
+    }
+
+
+    img {
+      height: auto; 
+    }
+
+    .cont {
+      width: auto; 
+      height: fit-content;
+    }
+    .order-1 {
+      order: 1; 
+    }
+
+    .order-2 {
+      order: 2; 
+    }
+  }
+</style>

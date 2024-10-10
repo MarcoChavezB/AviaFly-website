@@ -1,0 +1,69 @@
+<section class="center">
+  <div class="intra grid grid-cols-2 gap-5">
+    <div class="general">
+      <h4 class="font-semibold text-sm">Características generales</h4>
+      <ul style="color: #090C2B;" class="mt-5">
+        <li>Tripulación: 1 Piloto</li>
+        <li>Capacidad: 3 Pasajeros</li>
+        <li>Longitud: 7,9 m (26 ft)</li>
+        <li>Envergadura: 10,97 m (36 ft)</li>
+        <li>Altura: 2,9 m (9 1/2 ft)</li>
+        <li>Superficie alar: 16,2 m² (174,4 ft²)</li>
+        <li>Perfil alar: NACA 2312 modificado</li>
+        <li>Peso vacío: 630 Kg (1387 lb)</li>
+        <li>Peso útil: 415 Kg (913 lb)</li>
+        <li>Peso máximo al despegue: 1,045 Kg (2,300 lb)</li>
+        <li>Planta motriz: 1 motor marca Avco Lycoming 4 cil Enfriado por Aire horizontales opuestos, Flecha Directa</li>
+        <li>Caballos de Fuerza: 150 HP 2,700 RPM</li>
+      </ul>
+    </div>
+    <div class="performance">
+      <h4 class="font-semibold text-sm">Rendimiento</h4>
+      <ul style="color: #090C2B;" class="mt-5">
+        <li><strong>Velocidad nunca excedida (Vne):</strong> 302 km/h (188 MPH; 163 kt)</li>
+        <li><strong>Velocidad máxima operativa (Vno):</strong> 228 km/h (142 MPH; 123 kt)</li>
+        <li><strong>Alcance:</strong> 1270 km (686 nmi; 789 mi)</li>
+        <li><strong>Radio de acción:</strong> km</li>
+        <li><strong>Alcance en combate:</strong> km</li>
+        <li><strong>Alcance en ferry:</strong> km</li>
+        <li><strong>Techo de vuelo:</strong> 4328 m (14 200 ft)</li>
+        <li><strong>Régimen de ascenso:</strong> 3,7 m/s (720 ft/min)</li>
+        <li><strong>Carga alar:</strong> 13.2 Lbs x Pies cuadrados</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 40vh;
+  }
+
+  .intra {
+    width: 55%;
+    height: 90%;
+  }
+
+  .general ul, .performance ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  li{
+    font-size: 0.8rem;
+  }
+
+
+  @media only screen and (max-width: 599px) {
+    .intra{
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    section{
+      height: fit-content;
+      margin-top: 50px;
+    }
+  }
+</style>

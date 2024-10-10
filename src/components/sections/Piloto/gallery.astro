@@ -1,0 +1,65 @@
+
+<section class="mt-10 flex justify-center items-center">
+  <div class="intra-cont">
+    <div class="courses flex flex-wrap gap-2">
+      <div class="img">
+        <img src="/img/PilotoPrivado/PilotoPrivado3.jpg" alt="">
+      </div>
+      <div class="last">
+        <img src="/img/PilotoPrivado/PilotoPrivado4.jpg" alt="">
+      </div>
+      <div class="last">
+        <img src="/img/PilotoPrivado/PilotoPrivado5.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section{
+    height: 46vh;
+  }
+
+  .intra-cont{
+    height: 80%;
+    width: 50%;
+  }
+
+  .last{
+    height: 40vh;
+    width: 15vw;
+  }
+
+  .img{
+    height: 22.7vh;
+    width: 16vw;
+  }
+
+  img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+
+  .title h3{
+    background-color: white;
+    color: #090C2B;
+    font-size: 2rem;
+  }
+
+
+  @media only screen and (max-width: 599px) {
+    .img, .last{
+      width: 100%;
+    }
+    .intra-cont{
+      width: 90%;
+    }
+    
+    section{
+      height: fit-content;
+      margin-bottom: 50px;
+    }
+  }
+</style>

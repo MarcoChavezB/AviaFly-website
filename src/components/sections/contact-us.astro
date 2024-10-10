@@ -1,0 +1,56 @@
+---
+import SimpleButton from "../buttons/simple-button.astro"
+---
+<section id="contact-us" #contact-us class="center">
+  <div class="intra-content gap-10">
+    <div class="info flex flex-col text-[#090C2B] mt-20 ml-20">
+      <h4 class="font-semibold text-2xl">CONTACTO</h4>
+      <p class="text-gray-500 text-sm">Estamos a tus ordenes para cualquier duda o comentario, por favor completa el siguiente formulario y muy pronto nos pondremos en contacto</p>
+    </div>
+    <div class="data flex justify-center items-start flex-col">
+      <div class="intra flex flex-col gap-2">
+        <input class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Nombre">
+        <input class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Correo electronico">
+        <textarea 
+          class="w-full h-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+          placeholder="Mensaje"
+        ></textarea>
+      </div>
+      <SimpleButton content="Enviar mensaje"/>
+    </div>
+  </div> 
+</section>
+<style>
+  section{
+    height: 65vh;
+  }
+
+  .intra-content {
+    height: 90%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+  }
+
+  .intra{
+    width: 70%;
+    height: 50%;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .intra-content{
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .data{
+      align-items: center;     
+      height: 50vh;
+    }
+
+    section{
+      height: 75vh;
+    }
+  }
+</style>

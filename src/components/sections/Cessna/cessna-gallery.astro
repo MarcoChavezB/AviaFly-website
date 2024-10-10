@@ -1,0 +1,72 @@
+<section class="mt-10 mb-10 flex justify-center items-center">
+  <div class="intra-cont">
+    <div class="title flex items-center justify-center">
+      <h3 class="p-2 px-40 font-bold">Galería</h3>
+    </div>
+    <div class="courses flex flex-wrap gap-2">
+      <div class="img">
+        <img src="/img/Cessna/Cessna1.jpg" alt="">
+      </div>
+      <div class="img">
+        <img src="/img/Cessna/Cessna2.jpg" alt="">
+      </div>
+      <div class="img">
+        <img src="/img/Cessna/Cessna3.jpg" alt="">
+      </div>
+      <div class="last">
+        <img src="/img/Cessna/CessnaPlanos.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section{
+    height: 80vh;
+  }
+
+
+  .intra-cont{
+    height: 80%;
+    width: 50%;
+  }
+
+  .img{
+    height: 22.7vh;
+    width: 16vw;
+  }
+
+.last {
+  height: 39.7vh;  
+  width: 16vw;     
+}
+
+  img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+  .title h3{
+    background-color: white;
+    color: #090C2B;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .img, .last{
+      width: 100%;
+    }
+    .intra-cont{
+      width: 90%;
+    }
+    
+    section{
+      height: fit-content;
+    }
+  }
+</style>
