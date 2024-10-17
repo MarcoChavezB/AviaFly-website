@@ -37,13 +37,13 @@ const { img } = Astro.props;
   .slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    object-fit: cover;
   }
 
-  /* Adaptación para dispositivos móviles */
   @media screen and (max-width: 767px) {
     .slider-frame {
-      height: 300px; /* Ajusta según sea necesario */
+      height: 100%;
+
     }
   }
 </style>

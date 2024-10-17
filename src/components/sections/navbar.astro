@@ -1,21 +1,41 @@
-
 <nav class="text-white" transition:animate="none">
-  <div class="flex justify-center items-center w-full">
-    <div class="flex items-center justify-between gap-72 h-20">
-      <div class="flex-shrink-0">
-        <a href="/">
-          <img src="/img/Logo_avia_blanco.png" alt="Logo de AVIA">
-        </a>
+  <div class="flex justify-between items-center w-full h-20 px-4 md:px-8">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <a href="/">
+        <img src="/img/Logo_avia_blanco.png" alt="Logo de AVIA">
+      </a>
+    </div>
+
+    <!-- Menu options -->
+    <div class="hidden md:flex nav">
+      <div class="cursor-pointer ml-5 flex items-baseline space-x-4">
+        <a href="/" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">INICIO</a>
+        <a href="/#about-us" class="text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">NOSOTROS</a>
+        <a href="/#courses" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">CURSOS</a>
+        <a href="/#contact-us" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">CONTACTO</a>
+        <a href="https://aviafly.site" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">SISTEMA AVIA</a>
       </div>
-      <div class="hidden md:block">
-        <div class="cursor-pointer ml-5 flex items-baseline space-x-4">
-          <a href="/" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">INICIO</a>
-          <a href="/#about-us" class="text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">NOSOTROS</a>
-          <a href="/#courses" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">CURSOS</a>
-          <a href="/#contact-us" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">CONTACTO</a>
-          <a href="https://aviafly.site" class="cursor-pointer text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">SISTEMA AVIA</a>
-        </div>
-      </div>
+    </div>
+
+    <!-- Hamburger icon for mobile -->
+    <div class="md:hidden flex items-center">
+      <button id="nav-toggle" class="focus:outline-none">
+        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="/" class="cursor-pointer block text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">INICIO</a>
+      <a href="/#about-us" class="block text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">NOSOTROS</a>
+      <a href="/#courses" class="cursor-pointer block text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">CURSOS</a>
+      <a href="/#contact-us" class="cursor-pointer block text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">CONTACTO</a>
+      <a href="https://aviafly.site" class="cursor-pointer block text-gray-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">SISTEMA AVIA</a>
     </div>
   </div>
 </nav>
@@ -28,4 +48,39 @@
   img {
     height: 4.5rem;
   }
+
+  @media only screen and (max-width: 599px) {
+    .flex-shrink-0 {
+      order: 1;
+    }
+
+    .nav {
+      order: 3;
+    }
+
+    #nav-toggle {
+      order: 2;
+    }
+
+    img {
+      height: 3rem;
+    }
+  }
 </style>
+
+<script client:load>
+  function initMobileMenu() {
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => {
+        console.log("click");
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  }
+
+
+  document.addEventListener('astro:page-load', initMobileMenu);
+</script>
