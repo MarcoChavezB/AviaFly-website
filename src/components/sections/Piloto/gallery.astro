@@ -1,65 +1,48 @@
+---
+const images = Object.keys(
+  import.meta.glob('/public/img/PilotoPrivado/*.{jpg,jpeg,png,gif,webp}', { as: 'url' })
+);
+---
 
-<section class="mt-10 flex justify-center items-center">
+<section class="flex justify-center items-start m-10">
   <div class="intra-cont">
-    <div class="courses flex flex-wrap gap-2">
-      <div class="img">
-        <img src="/img/PilotoPrivado/PilotoPrivado3.jpg" alt="">
-      </div>
-      <div class="last">
-        <img src="/img/PilotoPrivado/PilotoPrivado4.jpg" alt="">
-      </div>
-      <div class="last">
-        <img src="/img/PilotoPrivado/PilotoPrivado5.jpg" alt="">
-      </div>
+    <div class="masonry-gallery">
+      {images.map((src) => (
+        <img src={src} alt="Galería" loading="lazy" />
+      ))}
     </div>
   </div>
 </section>
 
 <style>
-  section{
-    height: 46vh;
+  .intra-cont {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .intra-cont{
-    height: 80%;
-    width: 50%;
+  .masonry-gallery {
+    column-count: 3;
+    column-gap: 1rem;
   }
 
-  .last{
-    height: 40vh;
-    width: 15vw;
-  }
-
-  .img{
-    height: 22.7vh;
-    width: 16vw;
-  }
-
-  img{
-    border-radius: 10px;
-    height: 100%;
+  .masonry-gallery img {
     width: 100%;
-    object-fit: cover; 
+    height: auto; /* La imagen mantendrá su proporción natural */
+    margin-bottom: 1rem;
+    object-fit: contain; /* Mostrar la imagen completa sin recortar */
+    border-radius: 10px;
+    display: block;
   }
 
-  .title h3{
-    background-color: white;
-    color: #090C2B;
-    font-size: 2rem;
+  @media only screen and (max-width: 768px) {
+    .masonry-gallery {
+      column-count: 2;
+    }
   }
 
-
-  @media only screen and (max-width: 599px) {
-    .img, .last{
-      width: 100%;
-    }
-    .intra-cont{
-      width: 90%;
-    }
-    
-    section{
-      height: fit-content;
-      margin-bottom: 50px;
+  @media only screen and (max-width: 480px) {
+    .masonry-gallery {
+      column-count: 1;
     }
   }
 </style>
