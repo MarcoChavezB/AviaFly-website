@@ -1,7 +1,6 @@
 ---
-const images = Object.keys(
-  import.meta.glob('/public/img/Sobrecargo/*.{jpg,jpeg,png,gif,webp}', { as: 'url' })
-);
+const imageImports = import.meta.glob('../../assets/img/Sobrecargo/*.{jpg,jpeg,png,gif,webp}', { eager: true, as: 'url' });
+const images = Object.values(imageImports);
 ---
 
 <section class="flex justify-center items-start">
