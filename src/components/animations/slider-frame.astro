@@ -7,7 +7,7 @@ const { img } = Astro.props;
 </div>
 
 <script type="module" is:inline>
-  const images = {JSON.stringify(img)};
+  const images = JSON.stringify(img);
   let current = 0;
   const sliderImg = document.getElementById("slider-img");
 
